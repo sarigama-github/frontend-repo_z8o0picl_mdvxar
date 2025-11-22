@@ -1,13 +1,30 @@
-import React from 'react'
-import { Sparkles, Send } from 'lucide-react'
+import React, { useState } from 'react'
+import { Sparkles, Send, Loader2 } from 'lucide-react'
 
-const QuickChip = ({ label }) => (
-  <button className="px-3 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-200/80 hover:bg-blue-500/20 hover:text-blue-100 border border-blue-500/20 transition">
+const QuickChip = ({ label, onClick }) => (
+  <button onClick={() => onClick?.(label)} className="px-3 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-200/80 hover:bg-blue-500/20 hover:text-blue-100 border border-blue-500/20 transition">
     {label}
   </button>
 )
 
-export default function TaskInput() {
+export default function TaskInput({ onSearch }) {
+  const [value, setValue] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const submit = async () => {
+    if (!value.trim()) return
+    setLoading(true)
+    try {
+      await onSearch?.(value.trim())
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const setSample = (text) => {
+    setValue(text)
+  }
+
   return (
     <div className="px-6 py-5">
       <div className="max-w-3xl">
@@ -19,11 +36,14 @@ export default function TaskInput() {
             </div>
             <input
               className="flex-1 bg-transparent outline-none text-blue-100 placeholder:text-blue-300/40 text-sm"
-              placeholder="Tell AAWA what to do on the internet… (e.g., ‘Find me the best phone under ₹20,000 for gaming.’)"
+              placeholder="Type a topic and get the top 5 books… (e.g., 'deep learning')"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && submit()}
+              disabled={loading}
             />
-            <button className="inline-flex items-center gap-2 bg-gradient-to-tr from-cyan-500 to-blue-600 text-white text-sm px-4 py-2 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:brightness-110 transition">
-              <span>Run</span>
-              <Send className="w-4 h-4" />
+            <button onClick={submit} disabled={loading} className="inline-flex items-center gap-2 bg-gradient-to-tr from-cyan-500 to-blue-600 text-white text-sm px-4 py-2 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:brightness-110 transition disabled:opacity-60">
+              {loading ? (<><Loader2 className="w-4 h-4 animate-spin" /><span>Searching</span></>) : (<><span>Run</span></>)}
             </button>
           </div>
         </div>
@@ -33,11 +53,9 @@ export default function TaskInput() {
         </div>
 
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          <QuickChip label="Find a phone" />
-          <QuickChip label="Find flights" />
-          <QuickChip label="Find restaurants" />
-          <QuickChip label="Track a product price" />
-          <QuickChip label="Run my daily routine" />
+          {['deep learning','productivity','startups','psychology','investing'].map((l) => (
+            <QuickChip key={l} label={l} onClick={setSample} />
+          ))}
         </div>
       </div>
     </div>
