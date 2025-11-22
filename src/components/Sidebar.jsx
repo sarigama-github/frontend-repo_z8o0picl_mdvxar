@@ -44,7 +44,7 @@ export default function Sidebar() {
           <RecentItem label="Chennai → Delhi flights" />
           <RecentItem label="Veg restaurants in T Nagar" />
           <RecentItem label="Track price: AirPods Pro 2" />
-          <RecentItem label="Best 27" monitor for coding" />
+          <RecentItem label={'Best 27" monitor for coding'} />
         </div>
       </div>
 

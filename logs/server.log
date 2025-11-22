@@ -3,78 +3,7 @@
 > vite
 
 
-  VITE v5.4.20  ready in 224 ms
+  VITE v5.4.20  ready in 222 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.1.65:3000/
-7:43:18 AM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/components/Sidebar.jsx:47:56: ERROR: Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-7:43:19 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/Sidebar.jsx:47:56: ERROR: Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/Sidebar.jsx:47:56
-  
-  Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  45 |            <RecentItem label="Veg restaurants in T Nagar" />
-  46 |            <RecentItem label="Track price: AirPods Pro 2" />
-  47 |            <RecentItem label="Best 27" monitor for coding" />
-     |                                                          ^
-  48 |          </div>
-  49 |        </div>
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-7:43:40 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/Sidebar.jsx:47:56: ERROR: Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/Sidebar.jsx:47:56
-  
-  Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  45 |            <RecentItem label="Veg restaurants in T Nagar" />
-  46 |            <RecentItem label="Track price: AirPods Pro 2" />
-  47 |            <RecentItem label="Best 27" monitor for coding" />
-     |                                                          ^
-  48 |          </div>
-  49 |        </div>
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-7:44:07 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/Sidebar.jsx:47:56: ERROR: Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/Sidebar.jsx:47:56
-  
-  Expected ">" but found "\" />\n        </div>\n      </div>\n\n      <div className=\""
-  45 |            <RecentItem label="Veg restaurants in T Nagar" />
-  46 |            <RecentItem label="Track price: AirPods Pro 2" />
-  47 |            <RecentItem label="Best 27" monitor for coding" />
-     |                                                          ^
-  48 |          </div>
-  49 |        </div>
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
